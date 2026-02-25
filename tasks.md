@@ -1,0 +1,16 @@
+# Tareas: FixStation Naranjo
+
+- [x] Estructura inicial de carpetas
+- [x] Generación de Assets (Logo e Imágenes)
+- [x] HTML: Estructura base y secciones semánticas
+- [x] CSS: Variables y estilos base (Mobile-First)
+- [x] CSS: Diseño de Hero y efectos Glassmorphism
+- [x] JS: Interactividad y scroll animations
+- [x] Verificación final
+- [x] Corrección de compatibilidad: `background-clip`
+- [x] Expansión multi-página: Páginas de detalles de servicios
+- [x] Integración de WhatsApp personalizada por servicio
+- [x] Refinamiento de Branding Seniors (Sin neones, colores sólidos)
+- [x] Títulos en Mayúsculas y Blanco (Hero)
+- [x] Reemplazo por Imágenes de Taller Reales
+- [x] Corrección de Iconos de Marca (Nintendo Switch)
