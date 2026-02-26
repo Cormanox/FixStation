@@ -19,3 +19,5 @@
 - [x] UI: Implementar botones de filtro "Consolas" y "Laptops & PC"
 - [x] HTML: Crear páginas individuales para servicios de PC
 - [x] JS: Lógica de alternancia entre rejillas de servicios
+- [x] SEO/UI: Configurar Favicon usando el logo de la página
+- [x] Precios: Actualización de tarifas según nueva lista (Consolas y PC)

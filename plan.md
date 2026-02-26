@@ -25,6 +25,9 @@
      - Mejora/Cambio de Componentes (SSD, RAM, etc.).
 3. **Confianza**: Marcas soportadas (PS4, PS5, Xbox, Nintendo Switch, ASUS, HP, Dell, Lenovo, etc.).
 4. **Footer**: Redes sociales e información de contacto centralizada.
+5. **SEO & UI Polish**:
+   - Favicon configurado con el logo oficial.
+   - Metadatos para redes sociales.
 
 ## 3. Lógica (script.js)
 
