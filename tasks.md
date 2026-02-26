@@ -26,3 +26,4 @@
 - [x] SEO: Añadir etiquetas Open Graph (og:title, og:image, og:description) en meta tags
 - [x] UI/JS: Implementar Loader inicial y Barra de progreso de lectura (Scroll)
 - [x] UI/CSS: Añadir micro-interacciones y animaciones hover avanzadas
+- [x] UI/JS: Implementar Menú Hamburguesa para versión Mobile

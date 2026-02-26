@@ -94,11 +94,49 @@ nav {
   align-items: center;
 }
 
-@media (max-width: 400px) {
-  .nav-links li:not(:last-child) {
+/* Mobile Menu Layout */
+.mobile-menu-btn {
+  display: block;
+  font-size: 1.8rem;
+  color: var(--text-main);
+  cursor: pointer;
+  z-index: 1002;
+}
+
+@media (max-width: 767px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 30px;
+    clip-path: circle(0% at top right); /* Hidden by default */
+    transition: clip-path 0.5s ease-out;
+    border-bottom: 2px solid var(--brand-ps);
+  }
+
+  .nav-links.active {
+    clip-path: circle(150% at top right); /* Revealed */
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-menu-btn {
     display: none;
   }
 }
+
 
 .nav-links a {
   font-size: 0.85rem;
