@@ -14,3 +14,8 @@
 - [x] Títulos en Mayúsculas y Blanco (Hero)
 - [x] Reemplazo por Imágenes de Taller Reales
 - [x] Corrección de Iconos de Marca (Nintendo Switch)
+- [x] Actualización de número de contacto oficial (+506 60331197)
+- [x] Expansión: Nuevos servicios para Laptops y Computadoras de escritorio
+- [x] UI: Implementar botones de filtro "Consolas" y "Laptops & PC"
+- [x] HTML: Crear páginas individuales para servicios de PC
+- [x] JS: Lógica de alternancia entre rejillas de servicios

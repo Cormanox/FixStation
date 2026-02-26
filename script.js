@@ -80,7 +80,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Update WhatsApp link
                 const baseText = whatsappBtn.getAttribute('data-base-text');
                 const encodedText = encodeURIComponent(`${baseText} para mi ${selectedConsole}`);
-                whatsappBtn.href = `https://wa.me/506XXXXXX?text=${encodedText}`;
+                whatsappBtn.href = `https://wa.me/50660331197?text=${encodedText}`;
+            });
+        });
+    }
+
+    // 6. Services Category Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const grids = {
+        consolas: document.getElementById('grid-consolas'),
+        pcs: document.getElementById('grid-pcs')
+    };
+
+    if (filterBtns.length > 0) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.getAttribute('data-category');
+
+                // Update active state of buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Switch grids
+                Object.keys(grids).forEach(key => {
+                    if (key === category) {
+                        grids[key].classList.remove('hidden');
+                        // Trigger reveal for new items
+                        revealOnScroll();
+                    } else {
+                        grids[key].classList.add('hidden');
+                    }
+                });
             });
         });
     }

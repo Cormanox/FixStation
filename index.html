@@ -23,7 +23,7 @@
     <header id="header">
       <nav class="container">
         <div class="logo">
-          <img src="images/logo.png" alt="FixStation Naranjo Logo" />
+          <img src="images/index/logo.png" alt="FixStation Naranjo Logo" />
         </div>
         <ul class="nav-links">
           <li><a href="#hero">Inicio</a></li>
@@ -39,7 +39,7 @@
         <div class="hero-overlay"></div>
         <div class="container hero-content">
           <img
-            src="images/logo.png"
+            src="images/index/logo.png"
             alt="FixStation Naranjo"
             class="hero-logo animate-in"
           />
@@ -50,7 +50,7 @@
             preventivo.
           </p>
           <a
-            href="https://wa.me/506XXXXXX"
+            href="https://wa.me/50660331197"
             target="_blank"
             class="btn-cta animate-in"
           >
@@ -62,11 +62,13 @@
       <!-- Trust Section -->
       <section id="trust">
         <div class="container">
-          <p class="trust-label">Reparamos todas las marcas</p>
+          <p class="trust-label">Reparamos todas las marcas de consolas y computadoras</p>
           <div class="brand-icons">
             <i class="fab fa-playstation" title="PlayStation"></i>
             <i class="fab fa-xbox" title="Xbox"></i>
-            <i class="fab fa-nintendo" title="Nintendo"></i>
+            <img src="images/consolas/switch-logo.png" alt="Nintendo Switch" class="brand-logo-img" title="Nintendo Switch">
+            <i class="fas fa-laptop" title="Laptops de todas las marcas"></i>
+            <i class="fas fa-desktop" title="Computadoras de escritorio"></i>
           </div>
         </div>
       </section>
@@ -75,12 +77,23 @@
       <section id="servicios">
         <div class="container">
           <h2 class="section-title">Nuestros Servicios</h2>
-          <div class="services-grid">
+          
+          <div class="services-filter animate-in">
+            <button class="filter-btn active" data-category="consolas">
+              <i class="fas fa-gamepad"></i> Consolas
+            </button>
+            <button class="filter-btn" data-category="pcs">
+              <i class="fas fa-laptop-code"></i> Laptops & PC
+            </button>
+          </div>
+
+          <!-- Consolas Grid -->
+          <div class="services-grid" id="grid-consolas">
             <!-- Service 1 -->
             <div class="service-card reveal">
               <div class="card-img">
                 <img
-                  src="images/service-maintenance.png"
+                  src="images/consolas/service-maintenance.png"
                   alt="Mantenimiento Preventivo"
                 />
               </div>
@@ -97,7 +110,7 @@
             <div class="service-card reveal">
               <div class="card-img">
                 <img
-                  src="images/service-joystick.png"
+                  src="images/consolas/service-joystick.png"
                   alt="Reparación de Joysticks"
                 />
               </div>
@@ -114,7 +127,7 @@
             <div class="service-card reveal">
               <div class="card-img">
                 <img
-                  src="images/service-cleaning.png"
+                  src="images/consolas/service-cleaning.png"
                   alt="Limpieza Profunda"
                 />
               </div>
@@ -131,7 +144,7 @@
             <div class="service-card reveal">
               <div class="card-img">
                 <img
-                  src="images/service-components.png"
+                  src="images/consolas/service-components.png"
                   alt="Cambio de Componentes"
                 />
               </div>
@@ -141,6 +154,58 @@
                   Instalación de SSD, reparación de puertos HDMI, fuentes de poder y más.
                 </p>
                 <a href="servicios/componentes.html" class="btn-outline">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PCs Grid (Hidden by default) -->
+          <div class="services-grid hidden" id="grid-pcs">
+            <!-- PC Service 1 -->
+            <div class="service-card reveal">
+              <div class="card-img">
+                <img
+                  src="images/laptop_y_pc/service-pc-maintenance.png"
+                  alt="Mantenimiento PC"
+                />
+              </div>
+              <div class="card-body">
+                <h3>Mantenimiento Preventivo</h3>
+                <p>
+                  Optimización de sistema, revisión de hardware y cuidado preventivo para laptops y equipos de escritorio.
+                </p>
+                <a href="servicios/pc-mantenimiento.html" class="btn-outline">Ver Detalles</a>
+              </div>
+            </div>
+            <!-- PC Service 2 -->
+            <div class="service-card reveal">
+              <div class="card-img">
+                <img
+                  src="images/laptop_y_pc/service-laptop-cleaning.png"
+                  alt="Limpieza Laptops"
+                />
+              </div>
+              <div class="card-body">
+                <h3>Limpieza Profunda</h3>
+                <p>
+                  Limpieza interna total y cambio de pasta térmica profesional para evitar apagones y sobrecalentamiento.
+                </p>
+                <a href="servicios/pc-limpieza.html" class="btn-outline">Ver Detalles</a>
+              </div>
+            </div>
+            <!-- PC Service 3 -->
+            <div class="service-card reveal">
+              <div class="card-img">
+                <img
+                  src="images/laptop_y_pc/service-pc-upgrade.png"
+                  alt="Mejora Componentes PC"
+                />
+              </div>
+              <div class="card-body">
+                <h3>Mejora de Componentes</h3>
+                <p>
+                  Ampliación de RAM, cambio de SSD, reemplazo de teclados, pantallas y reparación de bisagras.
+                </p>
+                <a href="servicios/pc-componentes.html" class="btn-outline">Ver Detalles</a>
               </div>
             </div>
           </div>
@@ -155,22 +220,23 @@
           <div class="footer-info">
             <h3>FixStation Naranjo</h3>
             <p>Cuidamos lo que te divierte.</p>
+            <p class="footer-contact"><i class="fas fa-phone-alt"></i> +506 6033-1197</p>
           </div>
           <div class="footer-social">
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/506XXXXXX" target="_blank"
+            <a href="https://www.instagram.com/fixstationnaranjo/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/50660331197" target="_blank"
               ><i class="fab fa-whatsapp"></i
             ></a>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2024 FixStation Naranjo. Todos los derechos reservados.</p>
+          <p>&copy; 2026 FixStation Naranjo. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/506XXXXXX" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/50660331197" class="whatsapp-float" target="_blank">
       <i class="fab fa-whatsapp"></i>
     </a>
 

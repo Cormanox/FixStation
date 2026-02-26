@@ -90,12 +90,18 @@ nav {
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   align-items: center;
 }
 
+@media (max-width: 400px) {
+  .nav-links li:not(:last-child) {
+    display: none;
+  }
+}
+
 .nav-links a {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
 }
 
@@ -178,12 +184,13 @@ nav {
 
 #hero h1 {
   font-family: var(--font-titles);
-  font-size: 3rem;
+  font-size: 2.2rem;
   line-height: 1.1;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  color: #fff; /* Solid white */
+  color: #fff;
+  padding: 0 5%;
 }
 
 h1 span {
@@ -238,16 +245,43 @@ h1 span {
 .brand-icons {
   display: flex;
   justify-content: center;
+  align-items: center; /* Alinea los iconos verticalmente al centro */
   gap: 40px;
   font-size: 2.5rem;
   color: var(--text-muted);
-  opacity: 0.6;
+}
+
+.brand-icons i,
+.brand-icons .brand-logo-img {
+  transition: var(--transition);
+}
+
+.brand-icons .brand-logo-img {
+  height: 3.2rem; /* Aumentado para equilibrar el peso visual con PS y Xbox */
+  width: auto;
+  filter: brightness(0) invert(1) drop-shadow(0.5px 0 0 #fff) drop-shadow(-0.5px 0 0 #fff); /* Simula mayor grosor */
+  opacity: 0.7;
+}
+
+.brand-icons i:hover,
+.brand-icons .brand-logo-img:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 .brand-icons i:hover {
   color: #fff;
-  opacity: 1;
-  transform: scale(1.1);
+}
+
+/* Console Selection Img */
+.console-img {
+  height: 1.8rem; /* Aumentado de 1.5rem */
+  width: auto;
+  filter: brightness(0) invert(1) drop-shadow(0.3px 0 0 #fff); /* Ligero aumento de grosor */
+}
+
+.console-btn.active .console-img {
+  filter: none; /* Show original colors if active? Or keep white? */
 }
 
 /* 5. Services Section */
@@ -273,6 +307,43 @@ h1 span {
   height: 4px;
   background: var(--logo-gradient);
   border-radius: 2px;
+}
+
+.services-filter {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 3rem;
+}
+
+.filter-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: var(--font-titles);
+  font-size: 1.1rem;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-btn:hover {
+  border-color: var(--brand-ps);
+  box-shadow: 0 0 15px rgba(0, 111, 205, 0.3);
+}
+
+.filter-btn.active {
+  background: var(--brand-ps);
+  border-color: var(--brand-ps);
+  box-shadow: 0 0 20px var(--brand-ps);
+}
+
+.hidden {
+  display: none !important;
 }
 
 .services-grid {
@@ -342,6 +413,17 @@ footer {
   text-align: center;
   gap: 2rem;
   margin-bottom: 3rem;
+}
+
+.footer-contact {
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.footer-contact i {
+  color: var(--brand-ps);
+  margin-right: 5px;
 }
 
 .footer-social {
@@ -526,6 +608,10 @@ footer {
   background: rgba(255,255,255,0.02);
 }
 
+.console-btn i {
+  font-size: 1.2rem;
+}
+
 .console-btn:hover {
   border-color: var(--accent-main);
 }
@@ -547,7 +633,7 @@ footer {
   }
 
   #hero h1 {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
   }
 
   .footer-content {
@@ -571,6 +657,6 @@ footer {
   }
 
   #hero h1 {
-    font-size: 6rem;
+    font-size: 4.5rem;
   }
 }
