@@ -19,8 +19,22 @@
     />
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/index/logo.png" />
+    
+    <!-- Open Graph SEO -->
+    <meta property="og:title" content="FixStation Naranjo | Expertos en Reparación" />
+    <meta property="og:description" content="Tu consola, como nueva. Reparación profesional para PS4, PS5, Switch, Xbox y PC." />
+    <meta property="og:image" content="https://fixstation-naranjo.com/images/index/logo.png" />
+    <meta property="og:type" content="website" />
   </head>
   <body>
+    <!-- Preloader -->
+    <div id="loader" class="loader-container">
+      <img src="images/index/logo.png" alt="Cargando..." class="loader-logo" />
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
     <!-- Header / Navbar -->
     <header id="header">
       <nav class="container">
@@ -30,6 +44,7 @@
         <ul class="nav-links">
           <li><a href="#hero">Inicio</a></li>
           <li><a href="#servicios">Servicios</a></li>
+          <li><a href="galeria.html">Galería</a></li>
           <li><a href="#contacto" class="btn-small">Contacto</a></li>
         </ul>
       </nav>
@@ -208,6 +223,50 @@
                   Ampliación de RAM, cambio de SSD, reemplazo de teclados, pantallas y reparación de bisagras.
                 </p>
                 <a href="servicios/pc-componentes.html" class="btn-outline">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- FAQ Section -->
+      <section id="faq">
+        <div class="container">
+          <h2 class="section-title">Preguntas Frecuentes</h2>
+          <div class="faq-accordion animate-in">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>¿Cuánto tiempo tarda un mantenimiento?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>El tiempo dependerá de la complejidad y del equipo. Un mantenimiento de consola o laptop puede tomar de 1 a 2 días, pero algunos procesos rápidos pueden resolverse el mismo día (45 mins - 1.5 horas) según disponibilidad.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>¿Pierdo mis datos si reparan mi consola o PC?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>En el 95% de los casos (como limpieza térmica, reparación de drift, puertos HDMI o pantallas), tus datos están completamente seguros. Solo si la reparación es en el disco duro o hay cambio de sistema operativo, te notificaremos previamente y recomendaremos un respaldo.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>¿Ofrecen garantía por los repuestos o reparaciones?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Sí, todos nuestros mantenimientos y reparaciones de hardware cuentan con garantía real de FixStation Naranjo, garantizando repuestos de alta calidad y un trabajo profesional.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>¿Tengo que hacer cita previa?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Recomendamos agendar la revisión previamente por WhatsApp para garantizar una atención más rápida, pero también puedes escribirnos directamente para confirmar disponibilidad antes de traer tu equipo.</p>
               </div>
             </div>
           </div>

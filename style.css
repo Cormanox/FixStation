@@ -222,11 +222,6 @@ h1 span {
   cursor: pointer;
 }
 
-.btn-cta:hover {
-  transform: translateY(-3px);
-  background: #0d610d;
-}
-
 /* 4. Trust Section */
 #trust {
   padding: 3rem 0;
@@ -460,13 +455,21 @@ footer {
   justify-content: center;
   font-size: 2rem;
   color: #fff;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   z-index: 1001;
   transition: var(--transition);
+  animation: floatPulse 2s infinite;
 }
 
 .whatsapp-float:hover {
   transform: scale(1.1) rotate(5deg);
+  animation: none;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
+}
+
+@keyframes floatPulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
 /* 8. Animations */
@@ -627,7 +630,194 @@ footer {
 .console-btn[data-console="Xbox"].active { background: var(--brand-xbox); }
 .console-btn[data-console="Nintendo"].active { background: var(--brand-nintendo); }
 
-/* 9. Responsiveness (Tablets & Desktop) */
+/* 10. Loader & Scroll Progress */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.loader-logo {
+  width: 100px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; filter: drop-shadow(0 0 20px var(--brand-ps)); }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+.loader-container.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(to right, var(--brand-ps), var(--brand-xbox), var(--brand-nintendo));
+  width: 0%;
+  z-index: 1001; /* Above header */
+  transition: width 0.1s;
+}
+
+/* 11. FAQ Accordion */
+#faq {
+  padding: 6rem 0;
+  background: #08080c;
+}
+
+.faq-accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.faq-item:hover {
+  border-color: var(--brand-ps);
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--text-main);
+  font-family: var(--font-titles);
+  font-size: 1.2rem;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-question i {
+  color: var(--brand-ps);
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.faq-answer p {
+  padding: 0 20px 20px 20px;
+  color: var(--text-muted);
+}
+
+
+
+/* 12. Micro-Interactions & Hover Animations */
+
+/* Pulse effect for CTA Buttons */
+.btn-cta {
+  animation: subtlePulse 2s infinite;
+  box-shadow: 0 0 10px rgba(16, 124, 16, 0.4);
+}
+
+.btn-cta:hover {
+  animation: none;
+  background: #0d610d;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(16, 124, 16, 0.6);
+}
+
+@keyframes subtlePulse {
+  0% { box-shadow: 0 0 0 0 rgba(16, 124, 16, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(16, 124, 16, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 124, 16, 0); }
+}
+
+/* Card image zoom effect enhancement and glow */
+.service-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.service-card:hover {
+  border-color: var(--brand-ps);
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 111, 205, 0.2);
+}
+
+.card-img img {
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.service-card:hover .card-img img {
+  transform: scale(1.15) rotate(2deg);
+}
+
+/* Navbar Links Hover Animation */
+.nav-links a {
+  position: relative;
+}
+
+.nav-links li:not(:last-child) a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--brand-ps);
+  transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.nav-links li:not(:last-child) a:hover::after {
+  width: 100%;
+}
+
+/* Brand Icons Float */
+.brand-icons i, .brand-icons .brand-logo-img {
+  transition: all 0.3s ease;
+}
+
+.brand-icons i:hover, .brand-icons .brand-logo-img:hover {
+  transform: translateY(-8px) scale(1.2);
+  text-shadow: 0 10px 15px rgba(255,255,255,0.4);
+}
+
+/* Filter buttons bounce */
+.filter-btn {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.filter-btn:hover {
+  transform: translateY(-3px);
+}
+
+.filter-btn:active {
+  transform: scale(0.95);
+}
+
+/* 13. Responsiveness (Tablets & Desktop) */
 @media (min-width: 768px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);

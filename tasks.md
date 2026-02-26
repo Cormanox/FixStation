@@ -21,3 +21,8 @@
 - [x] JS: Lógica de alternancia entre rejillas de servicios
 - [x] SEO/UI: Configurar Favicon usando el logo de la página
 - [x] Precios: Actualización de tarifas según nueva lista (Consolas y PC)
+- [x] HTML/CSS/JS: Sección de Preguntas Frecuentes (FAQ) con estilo acordeón
+- [x] HTML/CSS: Crear página de Galería en estado "En Mantenimiento" y enlazar en Navbar
+- [x] SEO: Añadir etiquetas Open Graph (og:title, og:image, og:description) en meta tags
+- [x] UI/JS: Implementar Loader inicial y Barra de progreso de lectura (Scroll)
+- [x] UI/CSS: Añadir micro-interacciones y animaciones hover avanzadas

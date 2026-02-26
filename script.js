@@ -115,4 +115,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 7. FAQ Accordion Logic
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const questionBtn = item.querySelector('.faq-question');
+        
+        questionBtn.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            
+            // Close all
+            faqItems.forEach(faq => {
+                faq.classList.remove('active');
+                faq.querySelector('.faq-answer').style.maxHeight = null;
+            });
+            
+            // If it wasn't active, open it
+            if (!isActive) {
+                item.classList.add('active');
+                const answer = item.querySelector('.faq-answer');
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            }
+        });
+    });
+
+    // 8. Scroll Progress Bar
+    window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        
+        const progressBar = document.getElementById("scroll-progress");
+        if(progressBar) {
+            progressBar.style.width = scrolled + "%";
+        }
+    });
+
+});
+
+// 9. Preloader Logic (Fires on window load, not just DOMContent)
+window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+    if(loader) {
+        setTimeout(() => {
+            loader.classList.add('fade-out');
+        }, 800); // 800ms delay to show the "pulse" animation nicely
+    }
 });

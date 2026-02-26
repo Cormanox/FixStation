@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Trabajos | FixStation Naranjo</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel='icon' type='image/png' href='images/index/logo.png' />
+    
+    <style>
+        .maintenance-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 70vh;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .maintenance-icon {
+            font-size: 5rem;
+            color: var(--brand-ps);
+            margin-bottom: 2rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="loader" class="loader-container">
+      <img src="images/index/logo.png" alt="Cargando..." class="loader-logo" />
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/index/logo.png" alt="FixStation Naranjo Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#hero">Inicio</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="galeria.html" style="color: var(--brand-ps);">Galería</a></li>
+                <li><a href="index.html#contacto" class="btn-small">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container maintenance-container animate-in">
+        <i class="fas fa-tools maintenance-icon"></i>
+        <h1 class="section-title" style="margin-bottom: 1rem;">Sección en <span>Mantenimiento</span></h1>
+        <p style="color: var(--text-muted); max-width: 600px; font-size: 1.1rem; margin-top: 10px;">
+            Estamos recopilando las mejores fotografías de nuestros trabajos (Antes / Después) para mostrarte la calidad de nuestro servicio. ¡Vuelve pronto!
+        </p>
+        <a href="index.html" class="btn-outline" style="margin-top: 2rem;"><i class="fas fa-arrow-left"></i> Volver al Inicio</a>
+    </main>
+
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none;">
+                <p>&copy; 2024 FixStation Naranjo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
